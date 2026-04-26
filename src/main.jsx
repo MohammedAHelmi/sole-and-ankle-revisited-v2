@@ -8,7 +8,7 @@ import { WIDTH_BREAKPOINTS } from './constants'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ThemeProvider theme={{widthBreakpoints: WIDTH_BREAKPOINTS}}>
+    <ThemeProvider theme={{ widthBreakpoints: WIDTH_BREAKPOINTS }}>
       <App />
       <GlobalStyles />
     </ThemeProvider>
