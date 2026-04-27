@@ -27,7 +27,7 @@ const SuperHeader = () => {
 
 const Strip = styled.div`
   display: none;
-  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     display: block;
     background-color: ${COLORS.gray[900]};
     height: 4px;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
-  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     display: none;
   }
 `;

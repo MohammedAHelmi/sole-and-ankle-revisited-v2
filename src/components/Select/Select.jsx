@@ -36,6 +36,9 @@ const Select = ({ label, value, children, ...delegated }) => {
 const Wrapper = styled.label`
   display: flex;
   align-items: baseline;
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
+    height: 42px;
+  }
 `;
 
 const VisibleLabel = styled.span`

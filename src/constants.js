@@ -19,6 +19,6 @@ export const WEIGHTS = {
 
 export const WIDTH_BREAKPOINTS = {
   phone: 37.5 + 'rem',
-  tablet: 39.375 + 'rem',
+  tablet: 59.375 + 'rem',
   laptop: 81.25 + 'rem'
 }

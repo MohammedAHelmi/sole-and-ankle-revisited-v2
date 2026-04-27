@@ -51,7 +51,7 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
-  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     justify-content: space-between;
     align-items: center;
     padding: 24px 16px 20px 16px;
@@ -62,7 +62,7 @@ const Nav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
-  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     display: none;
   }
 `;
@@ -89,7 +89,7 @@ const IconButton = styled.button`
 
 const MobileIcons = styled.div`
   display: none;
-  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     display: flex;
     align-items: center;
     gap: 16px;

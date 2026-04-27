@@ -15,14 +15,16 @@ const ShoeIndex = ({ sortId, setSortId }) => {
       <MainColumn>
         <Header>
           <Title>Running</Title>
-          <Select
-            label="Sort"
-            value={sortId}
-            onChange={(ev) => setSortId(ev.target.value)}
-          >
-            <option value="newest">Newest Releases</option>
-            <option value="price">Price</option>
-          </Select>
+          <Filter>
+            <Select
+              label="Sort"
+              value={sortId}
+              onChange={(ev) => setSortId(ev.target.value)}
+              >
+              <option value="newest">Newest Releases</option>
+              <option value="price">Price</option>
+            </Select>
+          </Filter>
         </Header>
         <Spacer size={32} />
         <ShoeGrid />
@@ -35,8 +37,10 @@ const ShoeIndex = ({ sortId, setSortId }) => {
             Shoes
           </Breadcrumbs.Crumb>
         </Breadcrumbs>
-        <Spacer size={42} />
-        <ShoeSidebar />
+        <SidebarWrapper>
+          <Spacer size={42} />
+          <ShoeSidebar />
+        </SidebarWrapper>
       </LeftColumn>
     </Wrapper>
   );
@@ -47,10 +51,30 @@ const Wrapper = styled.div`
   flex-direction: row-reverse;
   align-items: baseline;
   gap: 32px;
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 8px;
+  }
+`;
+
+const SidebarWrapper = styled.div`
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
+    display: none;
+  }
+`
+
+const Filter = styled.div`
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.phone}){
+    display: none;
+  }
 `;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
+  @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
+    flex-basis: 16px;
+  }
 `;
 
 const MainColumn = styled.div`
