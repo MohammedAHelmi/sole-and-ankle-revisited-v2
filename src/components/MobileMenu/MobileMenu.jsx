@@ -5,7 +5,7 @@ import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 import { Root, Portal, Overlay, Content, Title, Description, Close } from "@radix-ui/react-dialog";
-import { COLORS, WEIGHTS } from '../../constants';
+import { WEIGHTS } from '../../constants';
 
 const MobileMenu = ({ isOpen, onDismiss }) => {
   if (!isOpen) {
@@ -48,7 +48,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 };
 
 const Background = styled.div`
-  background: ${COLORS.gray["700"]};
+  background: var(--color-gray-700);
   opacity: 0.8;
   position: fixed;
   top: 0;
@@ -58,7 +58,7 @@ const Background = styled.div`
 `;
 
 const Menu = styled.div`
-  background-color: ${COLORS.white};
+  background-color: var(--color-white);
 	position: absolute;
   width: 300px;
   display: flex;
@@ -92,11 +92,11 @@ const NavLink = styled.a`
   font-size: ${18/16}rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `
 
@@ -109,7 +109,7 @@ const Footer = styled.footer`
 
 const FooterLink = styled.a`
   font-size: ${14/16}rem;
-  color: ${COLORS.gray["700"]};
+  color: var(--color-gray-700);
   font-weight: ${WEIGHTS.normal};
   text-decoration: none;
 `
