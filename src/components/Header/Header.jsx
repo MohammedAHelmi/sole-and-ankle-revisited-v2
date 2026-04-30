@@ -55,7 +55,12 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  overflow-x: auto;
+  gap: clamp(
+    1.5rem,
+    5.7vw - 0.25rem,
+    5rem
+  );
   margin: 0px 48px;
   @media(max-width: ${({theme}) => theme.widthBreakpoints.tablet}){
     display: none;

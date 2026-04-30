@@ -74,6 +74,10 @@ const Dismiss = styled.button`
   position: absolute;
   top: 26px;
   right: 16px;
+
+  &:focus {
+    outline: 2px solid black;
+  }
 `;
 
 const Nav = styled.nav`
